@@ -9,8 +9,7 @@ import UIKit
 
 class TabbarViewController: UITabBarController {
     
-    //private let mainViewController = UINavigationController(rootViewController: MainViewController())
-    private let mainViewController = UINavigationController(rootViewController: CategoryViewController())
+    private let mainViewController = UINavigationController(rootViewController: MainViewController())
     private let sellViewController = UINavigationController(rootViewController: SellViewController())
     private let messageViewController = UINavigationController(rootViewController: MessageViewController())
     
