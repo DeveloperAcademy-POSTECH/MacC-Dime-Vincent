@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B077AA528F4FC6800FAA066 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B077AA428F4FC6800FAA066 /* HomeViewController.swift */; };
+		7B6B43B028F508590066256A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B43AF28F508590066256A /* HomeCell.swift */; };
 		7BBA02F128F451130006C0B2 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA02F028F451130006C0B2 /* CategoryViewController.swift */; };
 		A9D7B9DE28F27B4D00ECEF58 /* ItemTappedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7B9DD28F27B4D00ECEF58 /* ItemTappedViewController.swift */; };
 		CB81DA5428F1B108005164FA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CB81DA5328F1B108005164FA /* Lottie */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		7B077AA428F4FC6800FAA066 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7B6B43AF28F508590066256A /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		7BBA02F028F451130006C0B2 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A9D7B9DD28F27B4D00ECEF58 /* ItemTappedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTappedViewController.swift; sourceTree = "<group>"; };
 		CB81DA5628F1B15D005164FA /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				7B077AA428F4FC6800FAA066 /* HomeViewController.swift */,
+				7B6B43AF28F508590066256A /* HomeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				CB81DA5A28F1B19E005164FA /* SellViewController.swift in Sources */,
 				CB81DA5728F1B15D005164FA /* MessageViewController.swift in Sources */,
 				CBADEE5928EEC05A0010B5AA /* BackButton.swift in Sources */,
+				7B6B43B028F508590066256A /* HomeCell.swift in Sources */,
 				CBADEE2E28EEBCE00010B5AA /* AppDelegate.swift in Sources */,
 				CBADEE5528EEBFBB0010B5AA /* BaseViewController.swift in Sources */,
 				CBADEE5B28EEC1CA0010B5AA /* UIViewController+Extension.swift in Sources */,
