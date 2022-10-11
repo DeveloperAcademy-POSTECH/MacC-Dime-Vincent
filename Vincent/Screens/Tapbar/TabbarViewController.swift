@@ -9,15 +9,15 @@ import UIKit
 
 class TabbarViewController: UITabBarController {
     
-    private let mainViewController = UINavigationController(rootViewController: MainViewController())
+    private let homeViewController = UINavigationController(rootViewController: HomeViewController())
     private let sellViewController = UINavigationController(rootViewController: SellViewController())
     private let messageViewController = UINavigationController(rootViewController: MessageViewController())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainViewController.tabBarItem.image = ImageLiteral.btnHome
-        mainViewController.tabBarItem.title = "홈"
+        homeViewController.tabBarItem.image = ImageLiteral.btnHome
+        homeViewController.tabBarItem.title = "홈"
         
         sellViewController.tabBarItem.image = ImageLiteral.btnEnroll
         sellViewController.tabBarItem.title = "등록"
@@ -27,6 +27,6 @@ class TabbarViewController: UITabBarController {
         
         tabBar.tintColor = .mainYellow
         tabBar.backgroundColor = .white
-        setViewControllers([mainViewController, sellViewController, messageViewController], animated: true)
+        setViewControllers([homeViewController, sellViewController, messageViewController], animated: true)
     }
 }

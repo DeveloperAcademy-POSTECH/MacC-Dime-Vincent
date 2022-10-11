@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
         let buttonAction = UIAction { _ in
             self.navigationController?.popViewController(animated: true)
         }
-        button.addAction(buttonAction, for: .touchUpInside)
+        //button.addAction(buttonAction, for: .touchUpInside)
         return button
     }()
     
