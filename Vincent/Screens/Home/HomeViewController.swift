@@ -8,51 +8,6 @@
 import UIKit
 
 final class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    private var collectionView = {
-        let layout = UICollectionViewCompositionalLayout { sectionNumber, env in
-            switch sectionNumber {
-            case 0:
-                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(100)))
-                
-                item.contentInsets.trailing = 16
-                item.contentInsets.bottom = 16
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(500)), subitems: [item])
-                //group.contentInsets.leading = 16
-                let section = NSCollectionLayoutSection(group: group)
-                section.boundarySupplementaryItems = [
-                    .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: categoryHeaderID, alignment: .topLeading)
-                ]
-                section.contentInsets = .init(top: 16, leading: 16, bottom: 0, trailing: 0)
-                return section
-            default:
-                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(250)))
-                item.contentInsets.trailing = 16
-                item.contentInsets.bottom = 16
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1000)), subitems: [item])
-                //group.contentInsets.leading = 16
-                let section = NSCollectionLayoutSection(group: group)
-                section.boundarySupplementaryItems = [
-                    .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40)), elementKind: categoryHeaderID, alignment: .topLeading)
-                ]
-                section.contentInsets = .init(top: 32, leading: 16, bottom: 0, trailing: 0)
-                return section
-            }
-        }
-        var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        // cv.backgroundColor = .gray
-        return cv
-    }()
-    static let categoryHeaderID = "카테고리"
-    let headerID = "headerID"
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
-        // header.backgroundColor = .orange
-        return header
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
-    }
     private let wallPaper = UIImageView().then {
         $0.image = UIImage(named: "wallpaperHome")
         $0.contentMode = .scaleAspectFill
@@ -76,6 +31,50 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
     private let searchBar = UIView().then {
         $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 10
+    }
+    private var collectionView = {
+        let layout = UICollectionViewCompositionalLayout { section, env in
+            switch section {
+            case 0:
+                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(100)))
+                item.contentInsets.trailing = 16
+                item.contentInsets.bottom = 16
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(500)), subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                section.boundarySupplementaryItems = [
+                    .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: categoryHeaderID, alignment: .topLeading)
+                ]
+                section.contentInsets = .init(top: 16, leading: 16, bottom: 0, trailing: 0)
+                return section
+            default:
+                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(250)))
+                item.contentInsets.trailing = 16
+                item.contentInsets.bottom = 16
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1000)), subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                section.boundarySupplementaryItems = [
+                    .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40)), elementKind: categoryHeaderID, alignment: .topLeading)
+                ]
+                section.contentInsets = .init(top: 32, leading: 16, bottom: 0, trailing: 0)
+                return section
+            }
+        }
+        var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return cv
+    }()
+    
+    static let categoryHeaderID = "카테고리"
+    static let recentItemsID = "최근 상품"
+    let headerID = "headerID"
+    
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
+        return header
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
     }
     
     override func render() {
@@ -114,12 +113,8 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-15)
             $0.bottom.equalTo(searchBar.snp.top).offset(60)
         }
+        navigationController?.isNavigationBarHidden = true
     }
-    //    override func viewDidLayoutSubviews() {
-    //        super.viewDidLayoutSubviews()
-    //        collectionView.frame = view.bounds
-    //        위의 view bounds로 화면 전체를 그리게 만들어보림
-    //    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -136,23 +131,25 @@ extension HomeViewController: UICollectionViewDataSource {
         cell.backgroundColor = .blue
         return cell
     }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 50, height: 50)
-//    }
 }
 
 class Header: UICollectionReusableView {
+    //Header 클래스는 각 세션에서 헤더를 장식하는 역할을 합니다. 현재 하나만 존재하며 두 세션 모두 사용되기에 다른 클래스가 필요하다고 생각되며 분리도 가능하다고 생각합니다.
     let label = UILabel()
+    let button = UIButton(type: .system)
+    let stackView = UIStackView()
     override init(frame: CGRect) {
         super.init(frame: frame)
         label.text = "카테고리"
-        addSubview(label)
+        button.setTitle("더보기", for: .normal)
+        button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        stackView.addArrangedSubview(label)
+        stackView.addArrangedSubview(button)
+        addSubview(stackView)
     }
     override func layoutSubviews() {
-        label.frame = bounds
+        stackView.frame = bounds
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
