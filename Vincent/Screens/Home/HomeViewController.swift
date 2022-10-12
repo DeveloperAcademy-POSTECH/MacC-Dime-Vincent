@@ -34,6 +34,7 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
     }
     private var collectionView = {
         let layout = UICollectionViewCompositionalLayout { section, env in
+            //섹션별로 레이아웃을 그립니다.
             switch section {
             case 0:
                 let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(100)))
@@ -60,6 +61,7 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
             }
         }
         var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .clear
         return cv
     }()
     
@@ -93,6 +95,7 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
         collectionView.delegate = self
         collectionView.register(HomeCell.self, forCellWithReuseIdentifier: HomeCell.cellID)
         collectionView.register(Header.self, forSupplementaryViewOfKind: HomeViewController.categoryHeaderID, withReuseIdentifier: headerID)
+        collectionView.register(HomeCategoryCell.self, forCellWithReuseIdentifier: HomeCategoryCell.identifier)
         
         helloLabel.snp.makeConstraints {
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
