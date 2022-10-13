@@ -27,23 +27,6 @@ class TabbarViewController: UITabBarController {
         
         tabBar.tintColor = .mainYellow
         tabBar.backgroundColor = .white
-
         setViewControllers([homeViewController, sellViewController, messageViewController], animated: true)
-        
-        self.delegate = self
     }
-    
-}
-
-extension TabbarViewController: UITabBarControllerDelegate {
-
-//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-//        print("@@")
-//        if viewController == sellViewController {
-//            print("dfdf")
-//            viewController.modalPresentationStyle = .overFullScreen
-//            viewController.present(testsellviewViewController(), animated: true)
-//        }
-//    }
-    
 }

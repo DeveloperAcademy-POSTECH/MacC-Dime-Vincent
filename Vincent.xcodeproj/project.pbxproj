@@ -7,37 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		7B077AA528F4FC6800FAA066 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B077AA428F4FC6800FAA066 /* HomeViewController.swift */; };
 		7B6B43B028F508590066256A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B43AF28F508590066256A /* HomeCell.swift */; };
 		7B6B43B228F6ABFD0066256A /* HomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B43B128F6ABFD0066256A /* HomeCategoryCell.swift */; };
-
-		10DAAE4D28F539B1000CB45C /* ArtItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAAE4C28F539B1000CB45C /* ArtItemCollectionView.swift */; };
-		10DAAE4F28F539C1000CB45C /* ArtItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAAE4E28F539C1000CB45C /* ArtItemCollectionViewCell.swift */; };
-		10DAAE5128F539CA000CB45C /* ArtItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAAE5028F539CA000CB45C /* ArtItem.swift */; };
-		10DAAE5328F5C792000CB45C /* ArtItemCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAAE5228F5C792000CB45C /* ArtItemCategoryView.swift */; };
-		10DAAE5528F5C7C2000CB45C /* ArtItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAAE5428F5C7C2000CB45C /* ArtItemViewController.swift */; };
-		10DAAE5728F5D480000CB45C /* ArtItemCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAAE5628F5D480000CB45C /* ArtItemCategoryViewCell.swift */; };
-
-		58161E9328F43DF0001F8461 /* SellCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58161E9228F43DF0001F8461 /* SellCheckBoxView.swift */; };
-		5826B99828F2A51000F60693 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826B99728F2A51000F60693 /* UIFont+Extension.swift */; };
-		5855709828F2AEDF002FB7C9 /* SellTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5855709728F2AEDF002FB7C9 /* SellTextFieldView.swift */; };
-		5855709C28F2FC88002FB7C9 /* SellSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5855709B28F2FC88002FB7C9 /* SellSelectView.swift */; };
-		58A30EE228F501140017C625 /* SellPhotoAddedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A30EE128F501140017C625 /* SellPhotoAddedBox.swift */; };
-		58A30EE428F5014A0017C625 /* SellPhotoTapAddBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A30EE328F5014A0017C625 /* SellPhotoTapAddBox.swift */; };
-
-		A951645828F465D3002CD715 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951645728F465D3002CD715 /* UITextView+Extension.swift */; };
 		7BBA02F128F451130006C0B2 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA02F028F451130006C0B2 /* CategoryViewController.swift */; };
-
-		A91C835528F4E248005DF70F /* ProfileTappedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C835428F4E248005DF70F /* ProfileTappedViewController.swift */; };
-		A91C835728F4F3FA005DF70F /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C835628F4F3FA005DF70F /* ProfileTableViewCell.swift */; };
 		A9D7B9DE28F27B4D00ECEF58 /* ItemTappedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7B9DD28F27B4D00ECEF58 /* ItemTappedViewController.swift */; };
-		A9F068C828F52E36009B5CEE /* ProfileEnumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F068C728F52E36009B5CEE /* ProfileEnumeration.swift */; };
-
-		A9725F4A28F65F5F001D88C0 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9725F4928F65F5F001D88C0 /* ReportViewController.swift */; };
-		A9D7B9DE28F27B4D00ECEF58 /* ItemTappedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7B9DD28F27B4D00ECEF58 /* ItemTappedViewController.swift */; };
-		CB18F2D928F67D5400742C30 /* GoodInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18F2D828F67D5400742C30 /* GoodInfoView.swift */; };
-
 		CB81DA5428F1B108005164FA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CB81DA5328F1B108005164FA /* Lottie */; };
 		CB81DA5728F1B15D005164FA /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81DA5628F1B15D005164FA /* MessageViewController.swift */; };
 		CB81DA5A28F1B19E005164FA /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81DA5928F1B19E005164FA /* SellViewController.swift */; };
@@ -64,47 +38,14 @@
 		CBADEE7028EEC65B0010B5AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBADEE6F28EEC65B0010B5AA /* SnapKit */; };
 		CBADEE7328EEC6720010B5AA /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CBADEE7228EEC6720010B5AA /* Then */; };
 		CBADEE7628EEC9B80010B5AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADEE7528EEC9B80010B5AA /* SearchViewController.swift */; };
-		CBCBEF7D28F2E39B009F134F /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF7C28F2E39B009F134F /* Channel.swift */; };
-		CBCBEF7F28F2E3A5009F134F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF7E28F2E3A5009F134F /* Message.swift */; };
-		CBCBEF8128F2E3B2009F134F /* ImageMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8028F2E3B2009F134F /* ImageMediaItem.swift */; };
-		CBCBEF8328F2E3BE009F134F /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8228F2E3BE009F134F /* Mocks.swift */; };
-		CBCBEF8828F2E40C009F134F /* MessageRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8728F2E40C009F134F /* MessageRoomViewController.swift */; };
-		CBCBEF8A28F2E430009F134F /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8928F2E430009F134F /* MessageTableViewCell.swift */; };
-		CBCBEF8E28F2E4A2009F134F /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCBEF8D28F2E4A2009F134F /* MessageKit */; };
-		CBCBEF9028F2E570009F134F /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8F28F2E570009F134F /* Sender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B077AA428F4FC6800FAA066 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7B6B43AF28F508590066256A /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		7B6B43B128F6ABFD0066256A /* HomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCell.swift; sourceTree = "<group>"; };
-
-		10DAAE4C28F539B1000CB45C /* ArtItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtItemCollectionView.swift; sourceTree = "<group>"; };
-		10DAAE4E28F539C1000CB45C /* ArtItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		10DAAE5028F539CA000CB45C /* ArtItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtItem.swift; sourceTree = "<group>"; };
-		10DAAE5228F5C792000CB45C /* ArtItemCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtItemCategoryView.swift; sourceTree = "<group>"; };
-		10DAAE5428F5C7C2000CB45C /* ArtItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtItemViewController.swift; sourceTree = "<group>"; };
-		10DAAE5628F5D480000CB45C /* ArtItemCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtItemCategoryViewCell.swift; sourceTree = "<group>"; };
-
-		58161E9228F43DF0001F8461 /* SellCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellCheckBoxView.swift; sourceTree = "<group>"; };
-		5826B99728F2A51000F60693 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		5855709728F2AEDF002FB7C9 /* SellTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTextFieldView.swift; sourceTree = "<group>"; };
-		5855709B28F2FC88002FB7C9 /* SellSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellSelectView.swift; sourceTree = "<group>"; };
-		58A30EE128F501140017C625 /* SellPhotoAddedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellPhotoAddedBox.swift; sourceTree = "<group>"; };
-		58A30EE328F5014A0017C625 /* SellPhotoTapAddBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellPhotoTapAddBox.swift; sourceTree = "<group>"; };
-
-		A951645728F465D3002CD715 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		7BBA02F028F451130006C0B2 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-
-		A91C835428F4E248005DF70F /* ProfileTappedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTappedViewController.swift; sourceTree = "<group>"; };
-		A91C835628F4F3FA005DF70F /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		A9D7B9DD28F27B4D00ECEF58 /* ItemTappedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTappedViewController.swift; sourceTree = "<group>"; };
-		A9F068C728F52E36009B5CEE /* ProfileEnumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEnumeration.swift; sourceTree = "<group>"; };
-
-		A9725F4928F65F5F001D88C0 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
-		A9D7B9DD28F27B4D00ECEF58 /* ItemTappedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTappedViewController.swift; sourceTree = "<group>"; };
-		CB18F2D828F67D5400742C30 /* GoodInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodInfoView.swift; sourceTree = "<group>"; };
-
 		CB81DA5628F1B15D005164FA /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		CB81DA5928F1B19E005164FA /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		CBADEE2A28EEBCE00010B5AA /* Vincent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vincent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,13 +71,6 @@
 		CBADEE6A28EEC39B0010B5AA /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		CBADEE6C28EEC3AB0010B5AA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		CBADEE7528EEC9B80010B5AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		CBCBEF7C28F2E39B009F134F /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		CBCBEF7E28F2E3A5009F134F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		CBCBEF8028F2E3B2009F134F /* ImageMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMediaItem.swift; sourceTree = "<group>"; };
-		CBCBEF8228F2E3BE009F134F /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
-		CBCBEF8728F2E40C009F134F /* MessageRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRoomViewController.swift; sourceTree = "<group>"; };
-		CBCBEF8928F2E430009F134F /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		CBCBEF8F28F2E570009F134F /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +81,6 @@
 				CBADEE7028EEC65B0010B5AA /* SnapKit in Frameworks */,
 				CBADEE7328EEC6720010B5AA /* Then in Frameworks */,
 				CB81DA5428F1B108005164FA /* Lottie in Frameworks */,
-				CBCBEF8E28F2E4A2009F134F /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,19 +97,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-
-		10DAAE4B28F5393C000CB45C /* ArtItem */ = {
-			isa = PBXGroup;
-			children = (
-				10DAAE5428F5C7C2000CB45C /* ArtItemViewController.swift */,
-				10DAAE4C28F539B1000CB45C /* ArtItemCollectionView.swift */,
-				10DAAE4E28F539C1000CB45C /* ArtItemCollectionViewCell.swift */,
-				10DAAE5228F5C792000CB45C /* ArtItemCategoryView.swift */,
-				10DAAE5628F5D480000CB45C /* ArtItemCategoryViewCell.swift */,
-				10DAAE5028F539CA000CB45C /* ArtItem.swift */,
-			);
-			path = ArtItem;
-
 		7BBA02EF28F450F80006C0B2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,37 +105,17 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		A91C835328F4E234005DF70F /* ProfileTapped */ = {
-			isa = PBXGroup;
-			children = (
-				A91C835428F4E248005DF70F /* ProfileTappedViewController.swift */,
-				A91C835628F4F3FA005DF70F /* ProfileTableViewCell.swift */,
-				A9F068C728F52E36009B5CEE /* ProfileEnumeration.swift */,
-			);
-			path = ProfileTapped;
-			sourceTree = "<group>";
-		};
 		A98D112A28F3D789006122DC /* ItemTapped */ = {
 			isa = PBXGroup;
 			children = (
 				A9D7B9DD28F27B4D00ECEF58 /* ItemTappedViewController.swift */,
-				A9725F4928F65F5F001D88C0 /* ReportViewController.swift */,
 			);
 			path = ItemTapped;
-			sourceTree = "<group>";
-		};
-		CB18F2D728F67D4600742C30 /* UIComponent */ = {
-			isa = PBXGroup;
-			children = (
-				CB18F2D828F67D5400742C30 /* GoodInfoView.swift */,
-			);
-			path = UIComponent;
 			sourceTree = "<group>";
 		};
 		CB81DA5528F1B143005164FA /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				CBCBEF8428F2E3DC009F134F /* Cell */,
 				CB81DA5628F1B15D005164FA /* MessageViewController.swift */,
 			);
 			path = Message;
@@ -225,11 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				CB81DA5928F1B19E005164FA /* SellViewController.swift */,
-				5855709728F2AEDF002FB7C9 /* SellTextFieldView.swift */,
-				5855709B28F2FC88002FB7C9 /* SellSelectView.swift */,
-				58161E9228F43DF0001F8461 /* SellCheckBoxView.swift */,
-				58A30EE328F5014A0017C625 /* SellPhotoTapAddBox.swift */,
-				58A30EE128F501140017C625 /* SellPhotoAddedBox.swift */,
 			);
 			path = Sell;
 			sourceTree = "<group>";
@@ -253,7 +148,6 @@
 		CBADEE2C28EEBCE00010B5AA /* Vincent */ = {
 			isa = PBXGroup;
 			children = (
-				CBB2953228F2E2F50094C67B /* Models */,
 				CBADEE4228EEBD410010B5AA /* Global */,
 				CBADEE4128EEBD3A0010B5AA /* Screens */,
 			);
@@ -264,17 +158,11 @@
 			isa = PBXGroup;
 			children = (
 				7B077AA328F4FC5900FAA066 /* Home */,
-
-				10DAAE4B28F5393C000CB45C /* ArtItem */,
-
-				A91C835328F4E234005DF70F /* ProfileTapped */,
-
 				7BBA02EF28F450F80006C0B2 /* Category */,
 				A98D112A28F3D789006122DC /* ItemTapped */,
 				CBADEE4A28EEBED10010B5AA /* Tapbar */,
 				CB81DA5828F1B17E005164FA /* Sell */,
 				CB81DA5528F1B143005164FA /* Message */,
-				CBCBEF8528F2E3F6009F134F /* MessageRoom */,
 				CBADEE4B28EEBEDE0010B5AA /* Main */,
 				CBADEE7428EEC9850010B5AA /* Search */,
 			);
@@ -342,8 +230,6 @@
 				CBADEE6228EEC26E0010B5AA /* UIView+Extension.swift */,
 				CBADEE6428EEC28A0010B5AA /* UILabel+Extension.swift */,
 				CBADEE6628EEC2E00010B5AA /* Notification+Extension.swift */,
-				5826B99728F2A51000F60693 /* UIFont+Extension.swift */,
-				A951645728F465D3002CD715 /* UITextView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -397,43 +283,6 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		CBB2953228F2E2F50094C67B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CBCBEF8B28F2E454009F134F /* Message */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CBCBEF8428F2E3DC009F134F /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				CBCBEF8928F2E430009F134F /* MessageTableViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		CBCBEF8528F2E3F6009F134F /* MessageRoom */ = {
-			isa = PBXGroup;
-			children = (
-				CB18F2D728F67D4600742C30 /* UIComponent */,
-				CBCBEF8728F2E40C009F134F /* MessageRoomViewController.swift */,
-			);
-			path = MessageRoom;
-			sourceTree = "<group>";
-		};
-		CBCBEF8B28F2E454009F134F /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				CBCBEF7C28F2E39B009F134F /* Channel.swift */,
-				CBCBEF7E28F2E3A5009F134F /* Message.swift */,
-				CBCBEF8028F2E3B2009F134F /* ImageMediaItem.swift */,
-				CBCBEF8F28F2E570009F134F /* Sender.swift */,
-				CBCBEF8228F2E3BE009F134F /* Mocks.swift */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -454,7 +303,6 @@
 				CBADEE6F28EEC65B0010B5AA /* SnapKit */,
 				CBADEE7228EEC6720010B5AA /* Then */,
 				CB81DA5328F1B108005164FA /* Lottie */,
-				CBCBEF8D28F2E4A2009F134F /* MessageKit */,
 			);
 			productName = Vincent;
 			productReference = CBADEE2A28EEBCE00010B5AA /* Vincent.app */;
@@ -488,7 +336,6 @@
 				CBADEE6E28EEC65B0010B5AA /* XCRemoteSwiftPackageReference "SnapKit" */,
 				CBADEE7128EEC6720010B5AA /* XCRemoteSwiftPackageReference "Then" */,
 				CB81DA5228F1B108005164FA /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				CBCBEF8C28F2E4A2009F134F /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			productRefGroup = CBADEE2B28EEBCE00010B5AA /* Products */;
 			projectDirPath = "";
@@ -516,61 +363,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10DAAE5328F5C792000CB45C /* ArtItemCategoryView.swift in Sources */,
-				10DAAE5528F5C7C2000CB45C /* ArtItemViewController.swift in Sources */,
 				CBADEE5F28EEC2490010B5AA /* UICollectionView+Extension.swift in Sources */,
-				CBCBEF8128F2E3B2009F134F /* ImageMediaItem.swift in Sources */,
 				CBADEE6528EEC28A0010B5AA /* UILabel+Extension.swift in Sources */,
 				CBADEE6D28EEC3AB0010B5AA /* BaseTableViewCell.swift in Sources */,
 				CBADEE5028EEBF620010B5AA /* Logger.swift in Sources */,
-				5826B99828F2A51000F60693 /* UIFont+Extension.swift in Sources */,
-				5855709828F2AEDF002FB7C9 /* SellTextFieldView.swift in Sources */,
 				CBADEE7628EEC9B80010B5AA /* SearchViewController.swift in Sources */,
-				58A30EE428F5014A0017C625 /* SellPhotoTapAddBox.swift in Sources */,
 				CBADEE5328EEBF950010B5AA /* ImageLiteral.swift in Sources */,
-				58A30EE228F501140017C625 /* SellPhotoAddedBox.swift in Sources */,
 				CBADEE5D28EEC2090010B5AA /* UIColor+Extension.swift in Sources */,
-				CBCBEF9028F2E570009F134F /* Sender.swift in Sources */,
 				CBADEE6928EEC3510010B5AA /* UITableView+Extension.swift in Sources */,
-				A9725F4A28F65F5F001D88C0 /* ReportViewController.swift in Sources */,
-				58161E9328F43DF0001F8461 /* SellCheckBoxView.swift in Sources */,
 				7BBA02F128F451130006C0B2 /* CategoryViewController.swift in Sources */,
-				CB18F2D928F67D5400742C30 /* GoodInfoView.swift in Sources */,
 				CBADEE6728EEC2E00010B5AA /* Notification+Extension.swift in Sources */,
-				A951645828F465D3002CD715 /* UITextView+Extension.swift in Sources */,
 				CBADEE3228EEBCE00010B5AA /* MainViewController.swift in Sources */,
 				7B077AA528F4FC6800FAA066 /* HomeViewController.swift in Sources */,
-				CBCBEF8A28F2E430009F134F /* MessageTableViewCell.swift in Sources */,
 				CBADEE4E28EEBF060010B5AA /* TabbarViewController.swift in Sources */,
 				CBADEE6128EEC25F0010B5AA /* NSObject+Extension.swift in Sources */,
-
-				10DAAE5728F5D480000CB45C /* ArtItemCategoryViewCell.swift in Sources */,
-
-				A9F068C828F52E36009B5CEE /* ProfileEnumeration.swift in Sources */,
 				CBADEE6B28EEC39B0010B5AA /* BaseCollectionViewCell.swift in Sources */,
-
-				A91C835528F4E248005DF70F /* ProfileTappedViewController.swift in Sources */,
-
-				CBCBEF7D28F2E39B009F134F /* Channel.swift in Sources */,
-
 				A9D7B9DE28F27B4D00ECEF58 /* ItemTappedViewController.swift in Sources */,
 				CBADEE6328EEC26F0010B5AA /* UIView+Extension.swift in Sources */,
-				10DAAE5128F539CA000CB45C /* ArtItem.swift in Sources */,
 				CB81DA5A28F1B19E005164FA /* SellViewController.swift in Sources */,
 				CB81DA5728F1B15D005164FA /* MessageViewController.swift in Sources */,
-				5855709C28F2FC88002FB7C9 /* SellSelectView.swift in Sources */,
-				CBCBEF7F28F2E3A5009F134F /* Message.swift in Sources */,
-				CBCBEF8328F2E3BE009F134F /* Mocks.swift in Sources */,
 				CBADEE5928EEC05A0010B5AA /* BackButton.swift in Sources */,
 				7B6B43B028F508590066256A /* HomeCell.swift in Sources */,
-				10DAAE4F28F539C1000CB45C /* ArtItemCollectionViewCell.swift in Sources */,
 				CBADEE2E28EEBCE00010B5AA /* AppDelegate.swift in Sources */,
-				CBCBEF8828F2E40C009F134F /* MessageRoomViewController.swift in Sources */,
 				CBADEE5528EEBFBB0010B5AA /* BaseViewController.swift in Sources */,
-				10DAAE4D28F539B1000CB45C /* ArtItemCollectionView.swift in Sources */,
 				CBADEE5B28EEC1CA0010B5AA /* UIViewController+Extension.swift in Sources */,
 				7B6B43B228F6ABFD0066256A /* HomeCategoryCell.swift in Sources */,
-				A91C835728F4F3FA005DF70F /* ProfileTableViewCell.swift in Sources */,
 				CBADEE3028EEBCE00010B5AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,7 +527,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Y8YH8GWMM;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vincent/Global/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -741,7 +558,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Y8YH8GWMM;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vincent/Global/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -813,14 +630,6 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		CBCBEF8C28F2E4A2009F134F /* XCRemoteSwiftPackageReference "MessageKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MessageKit/MessageKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -838,11 +647,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CBADEE7128EEC6720010B5AA /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
-		};
-		CBCBEF8D28F2E4A2009F134F /* MessageKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBCBEF8C28F2E4A2009F134F /* XCRemoteSwiftPackageReference "MessageKit" */;
-			productName = MessageKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
