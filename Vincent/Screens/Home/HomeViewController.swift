@@ -8,6 +8,9 @@
 import UIKit
 
 final class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    static let categoryHeaderID = "카테고리"
+    static let recentItemsID = "최근 상품"
+    let headerID = "headerID"
     private let wallPaper = UIImageView().then {
         $0.image = UIImage(named: "wallpaperHome")
         $0.contentMode = .scaleAspectFill
@@ -38,37 +41,34 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
             switch section {
             case 0:
                 let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(100)))
-                item.contentInsets.trailing = 16
+                item.contentInsets.leading = 8
+                item.contentInsets.trailing = 8
                 item.contentInsets.bottom = 16
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(500)), subitems: [item])
                 let section = NSCollectionLayoutSection(group: group)
                 section.boundarySupplementaryItems = [
                     .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: categoryHeaderID, alignment: .topLeading)
                 ]
-                section.contentInsets = .init(top: 16, leading: 16, bottom: 0, trailing: 0)
+                section.contentInsets = .init(top: 16, leading: 16, bottom: 0, trailing: 16)
                 return section
             default:
                 let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(250)))
-                item.contentInsets.trailing = 16
+                item.contentInsets.leading = 8
+                item.contentInsets.trailing = 8
                 item.contentInsets.bottom = 16
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1000)), subitems: [item])
                 let section = NSCollectionLayoutSection(group: group)
                 section.boundarySupplementaryItems = [
                     .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40)), elementKind: categoryHeaderID, alignment: .topLeading)
                 ]
-                section.contentInsets = .init(top: 32, leading: 16, bottom: 0, trailing: 0)
+                section.contentInsets = .init(top: 32, leading: 16, bottom: 0, trailing: 16)
                 return section
             }
         }
-        var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .clear
-        return cv
+        var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        return collectionView
     }()
-    
-    static let categoryHeaderID = "카테고리"
-    static let recentItemsID = "최근 상품"
-    let headerID = "headerID"
-    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
@@ -91,12 +91,6 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
         wallPaper.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(HomeCell.self, forCellWithReuseIdentifier: HomeCell.cellID)
-        collectionView.register(Header.self, forSupplementaryViewOfKind: HomeViewController.categoryHeaderID, withReuseIdentifier: headerID)
-        collectionView.register(HomeCategoryCell.self, forCellWithReuseIdentifier: HomeCategoryCell.identifier)
-        
         helloLabel.snp.makeConstraints {
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
             $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(30)
@@ -116,6 +110,11 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-15)
             $0.bottom.equalTo(searchBar.snp.top).offset(60)
         }
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(HomeCell.self, forCellWithReuseIdentifier: HomeCell.cellID)
+        collectionView.register(Header.self, forSupplementaryViewOfKind: HomeViewController.categoryHeaderID, withReuseIdentifier: headerID)
+        collectionView.register(HomeCategoryCell.self, forCellWithReuseIdentifier: HomeCategoryCell.identifier)
         navigationController?.isNavigationBarHidden = true
     }
 }
@@ -157,11 +156,6 @@ class Header: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
-
-
-
 
 
 #if DEBUG
