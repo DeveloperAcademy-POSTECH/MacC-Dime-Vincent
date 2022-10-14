@@ -30,3 +30,18 @@ struct CategoryItem:Hashable {
         self.imageName = imageName
     }
 }
+
+// MARK: 아래의 Extension으로 Category의 데이터를 생성합니다. UI를 담당하는 요소이기 때문에 적절한 imageName의 수정이 있다면 수정되어도 상관없을듯 합니다.
+
+extension CategoryItem {
+    static let list = [
+        CategoryItem(name: "평면예술", imageName: "note.text"),
+        CategoryItem(name: "디지털드로잉", imageName: "note.text"),
+        CategoryItem(name: "캔버스", imageName: "note.text"),
+        CategoryItem(name: "도예예술", imageName: "note.text"),
+        CategoryItem(name: "금속예술", imageName: "note.text"),
+        CategoryItem(name: "섬유패션", imageName: "note.text"),
+        CategoryItem(name: "예술서적", imageName: "note.text"),
+        CategoryItem(name: "제도용품", imageName: "note.text")
+    ]
+}

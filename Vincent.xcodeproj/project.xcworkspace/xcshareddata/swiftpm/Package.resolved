@@ -1,30 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "inputbaraccessoryview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/nathantannar4/InputBarAccessoryView",
-      "state" : {
-        "revision" : "0c4431a7f765ecb81dd97615023ff858bf65f89c",
-        "version" : "6.1.1"
-      }
-    },
-    {
       "identity" : "lottie-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/lottie-ios.git",
       "state" : {
         "branch" : "master",
         "revision" : "54aa8747da6998a94c1e901dd70013b70e804333"
-      }
-    },
-    {
-      "identity" : "messagekit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MessageKit/MessageKit.git",
-      "state" : {
-        "revision" : "14bfa7eb9f93267c3d7b8cdf58615bba27be672a",
-        "version" : "4.1.1"
       }
     },
     {

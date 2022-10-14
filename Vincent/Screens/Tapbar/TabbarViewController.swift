@@ -11,7 +11,7 @@ class TabbarViewController: UITabBarController {
     
     private let mainViewController = UINavigationController(rootViewController: HomeViewController())
     private let sellViewController = UINavigationController(rootViewController: SellViewController())
-    private let messageViewController = UINavigationController(rootViewController: MessageViewController())
+    private let messageViewController = UINavigationController(rootViewController: MainViewController())
     
     override func viewDidLoad() {
         super.viewDidLoad()

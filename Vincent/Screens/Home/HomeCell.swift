@@ -18,7 +18,6 @@ class HomeCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.backgroundColor = .link
         contentView.addSubview(testLagel)
-        
     }
     
     override func layoutSubviews() {

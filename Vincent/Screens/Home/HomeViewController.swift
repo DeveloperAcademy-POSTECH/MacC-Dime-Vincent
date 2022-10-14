@@ -33,7 +33,6 @@ final class HomeViewController: BaseViewController, UICollectionViewDelegate, UI
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
-    // TODO: 
     private let searchBar = UIView().then {
         $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 10

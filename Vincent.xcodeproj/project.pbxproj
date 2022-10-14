@@ -63,7 +63,6 @@
 		CBCBEF8328F2E3BE009F134F /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8228F2E3BE009F134F /* Mocks.swift */; };
 		CBCBEF8828F2E40C009F134F /* MessageRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8728F2E40C009F134F /* MessageRoomViewController.swift */; };
 		CBCBEF8A28F2E430009F134F /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8928F2E430009F134F /* MessageTableViewCell.swift */; };
-		CBCBEF8E28F2E4A2009F134F /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCBEF8D28F2E4A2009F134F /* MessageKit */; };
 		CBCBEF9028F2E570009F134F /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBEF8F28F2E570009F134F /* Sender.swift */; };
 /* End PBXBuildFile section */
 
@@ -134,7 +133,6 @@
 				CBADEE7028EEC65B0010B5AA /* SnapKit in Frameworks */,
 				CBADEE7328EEC6720010B5AA /* Then in Frameworks */,
 				CB81DA5428F1B108005164FA /* Lottie in Frameworks */,
-				CBCBEF8E28F2E4A2009F134F /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +437,6 @@
 				CBADEE6F28EEC65B0010B5AA /* SnapKit */,
 				CBADEE7228EEC6720010B5AA /* Then */,
 				CB81DA5328F1B108005164FA /* Lottie */,
-				CBCBEF8D28F2E4A2009F134F /* MessageKit */,
 			);
 			productName = Vincent;
 			productReference = CBADEE2A28EEBCE00010B5AA /* Vincent.app */;
@@ -473,7 +470,6 @@
 				CBADEE6E28EEC65B0010B5AA /* XCRemoteSwiftPackageReference "SnapKit" */,
 				CBADEE7128EEC6720010B5AA /* XCRemoteSwiftPackageReference "Then" */,
 				CB81DA5228F1B108005164FA /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				CBCBEF8C28F2E4A2009F134F /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			productRefGroup = CBADEE2B28EEBCE00010B5AA /* Products */;
 			projectDirPath = "";
@@ -794,14 +790,6 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		CBCBEF8C28F2E4A2009F134F /* XCRemoteSwiftPackageReference "MessageKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MessageKit/MessageKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -819,11 +807,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CBADEE7128EEC6720010B5AA /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
-		};
-		CBCBEF8D28F2E4A2009F134F /* MessageKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBCBEF8C28F2E4A2009F134F /* XCRemoteSwiftPackageReference "MessageKit" */;
-			productName = MessageKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
