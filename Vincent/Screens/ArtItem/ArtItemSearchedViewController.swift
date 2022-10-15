@@ -1,8 +1,8 @@
 //
-//  ArtItemViewController.swift
+//  ArtItemSearchedView.swift
 //  Vincent
 //
-//  Created by 김연호 on 2022/10/12.
+//  Created by 김연호 on 2022/10/15.
 //
 
 import UIKit
@@ -10,8 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-    // TODO:
-class ArtItemViewController: BaseViewController {
+class ArtItemSearchedViewController: BaseViewController {
 
     private let searchView = UIView().then {
         $0.backgroundColor = .black
@@ -29,32 +28,28 @@ class ArtItemViewController: BaseViewController {
         $0.placeholder = "윈저앤뉴튼, 홀베인, 클레이트 등"
     }
 
-    private let artItemCount = UILabel().then {
-        $0.backgroundColor = .black
-        $0.font = .systemFont(ofSize: 16, weight: .medium)
-        $0.text = "상품00개"
+    // TODO: -Dropdown 라이브러리 다운받아서 드롭다운으로 만들어야 할 것 같습니다. 임시로 디자인만 넣어놓음
+    private let categoryMenu = UIButton().then {
+        $0.addTarget(self, action: #selector(presentModal(_:)), for: .primaryActionTriggered)
+        $0.backgroundColor = .mainBlack
+        $0.titleLabel?.textColor = .white
+        $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .callout, weight: .semibold)
     }
-
-    private let artItemCategoryListView = ArtItemCategoryView()
 
     private let artItemCollectionView = ArtItemCollectionView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        setupLayouts()
+        render()
+        configUI()
     }
 
-    private func setupViews() {
-        view.backgroundColor = .white
-
-        view.addSubviews(searchView, magniImage, searchTextField, artItemCount)
-        view.addSubview(artItemCategoryListView)
+    override func render() {
+        view.addSubviews(searchView, magniImage, searchTextField, categoryMenu)
         view.addSubview(artItemCollectionView)
     }
 
-    private func setupLayouts() {
-
+    override func configUI() {
         searchView.snp.makeConstraints {
             $0.leading.equalTo(view.snp.leading).offset(60)
             $0.trailing.equalTo(view.snp.trailing).inset(20)
@@ -74,22 +69,36 @@ class ArtItemViewController: BaseViewController {
             $0.bottom.equalTo(searchView.snp.bottom).inset(7)
         }
 
-        artItemCount.snp.makeConstraints {
+        categoryMenu.snp.makeConstraints {
             $0.leading.equalTo(view.snp.leading).offset(20)
-            $0.top.equalTo(artItemCategoryListView.snp.bottom).offset(30)
-        }
-
-        artItemCategoryListView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(searchView.snp.bottom).offset(40)
-            $0.height.equalTo(190)
+            $0.top.equalTo(searchView.snp.bottom).offset(30)
         }
 
         artItemCollectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(artItemCategoryListView.snp.bottom).offset(30)
+            $0.top.equalTo(categoryMenu.snp.bottom).offset(30)
             $0.bottom.equalTo(view.snp.bottom)
         }
+    }
+}
+
+extension ArtItemSearchedViewController {
+    @objc private func presentModal(_: UIButton!) {
+        let categoryModalView = ArtItemCategotyModalViewController()
+
+        if #available(iOS 15.0, *) {
+            if let sheet = categoryModalView.sheetPresentationController {
+                sheet.detents = [.medium()]
+                sheet.preferredCornerRadius = 30
+                sheet.prefersGrabberVisible = true
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                sheet.selectedDetentIdentifier = .medium
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+
+        present(categoryModalView, animated: true, completion: nil)
 
     }
 }

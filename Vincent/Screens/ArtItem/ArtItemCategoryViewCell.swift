@@ -41,7 +41,6 @@ final class ArtItemCategoryCell: UICollectionViewCell {
     }
 
     private func setupLayouts() {
-
         artItemCategoryLabel.snp.makeConstraints {
             $0.centerX.equalTo(contentView.snp.centerX)
             $0.centerY.equalTo(contentView.snp.centerY)
