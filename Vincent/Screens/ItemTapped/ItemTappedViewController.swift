@@ -36,7 +36,7 @@ class ItemTappedViewController: BaseViewController {
         $0.contentSize.width = view.frame.width
     }
 
-    private let images: [UIImage?] = [UIImage(named: "i1"), UIImage(named: "i2"), UIImage(named: "i3"), UIImage(named: "i4")]
+    private let images: [UIImage?] = [UIImage(named: "port1"), UIImage(named: "port2"), UIImage(named: "port3"), UIImage(named: "port4")]
 
     private var imageScrollView = UIScrollView().then {
         $0.isPagingEnabled = true
@@ -62,11 +62,11 @@ class ItemTappedViewController: BaseViewController {
         $0.tintColor = .white
     }
 
-    private let buyButton = UIButton().then {
-        $0.setTitle("33000원에 살게요", for: .normal)
-        $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .footnote, weight: .bold)
-        $0.setTitleColor(.black, for: .normal)
-        $0.backgroundColor = .mainYellow
+    private let counselingButton = UIButton().then {
+        $0.setTitle("문의하기", for: .normal)
+        $0.titleLabel?.font = UIFont.preferredFont(forTextStyle: .callout, weight: .black)
+        $0.setTitleColor(.white, for: .normal)
+        $0.backgroundColor = .mainPink
         $0.layer.cornerRadius = 15
     }
 
@@ -79,9 +79,9 @@ class ItemTappedViewController: BaseViewController {
     }
 
     private let titleTextView = UITextView().then {
-        $0.text = "루키의 물건들 가격 제안 가능!! 10000만원 이상 부터 "
+        $0.text = "자기 소개/ 할말 / 폰트는 16 -> .callout 저는 송도에 거주하며 인천대에 재학중입니다. 송도와 영종도 부근을 많이 찍어봤고 주로 커플 스냅을 많이 찍습니다. 편하게 연락주세요!"
         $0.isScrollEnabled = false
-        $0.font = .preferredFont(forTextStyle: .title3, weight: .semibold)
+        $0.font = .preferredFont(forTextStyle: .callout, weight: .regular)
         $0.isUserInteractionEnabled = false
     }
 
@@ -92,7 +92,7 @@ class ItemTappedViewController: BaseViewController {
     }
 
     private let descriptionTextView = UITextView().then {
-        let text: String = "여기있😉키의 물건들 가격 제안 가능!! 10000만원 이키의 물건들 가격 제안 가능!! 10000만원 이키의 물여기있😉키의 물건들 가격 제안 가능!! 10000만원 이키의 물건들 가격 제안 가능!! 10000만원 이키의 물여기들 가격 제안 가능!! 10000만원 이키의 물여기있😉키의 물건들 가격 제안 가능!! 10000만원 이키의 sdasdasdasdasdasdasdasdasdasdasddasdasdasdasdsadsadasdasdasdasdasdasdasdasdasdasd"
+        let text: String = "여기있😉키의 물건들 가격 제안 가능!! 10000만원 이키의 물건들 가격 제안 가능!! 10000만원 이키의 물여기있😉키의 물건들 가격 제안 가능!! 10000만원 이키의 물건들 가격 제안 가능!! 10000만원 이키의 물여기들 가격 제안 가능!! 10000만원 이키의 물여기있😉키의 물건들 가격 제안 가능!! 10000만원 이키의"
         $0.setLineAndLetterSpacing(text)
         $0.font = .preferredFont(forTextStyle: .callout, weight: .regular)
         $0.isScrollEnabled = false
@@ -112,14 +112,14 @@ class ItemTappedViewController: BaseViewController {
     }
 
     private let sellerNickName = UILabel().then {
-        $0.text = "해커켄"
-        $0.font = .preferredFont(forTextStyle: .callout, weight: .regular)
+        $0.text = "심규보 작가님"
+        $0.font = .preferredFont(forTextStyle: .title3, weight: .bold)
     }
 
     private let sellerInformation = UILabel().then {
-        $0.text = "거래수:3 / 팔고 있는 물품 4"
+        $0.text = "#우정사진 #필름사진 #웨딩촬영"
         $0.font = .preferredFont(forTextStyle: .footnote, weight: .light)
-        $0.textColor = .systemGray2
+        $0.textColor = .systemGray
     }
 
     private let sellerProfileImage = UIImageView().then {
@@ -152,7 +152,7 @@ class ItemTappedViewController: BaseViewController {
 
         //imageScrollView
         imageScrollView.snp.makeConstraints {
-            $0.height.equalTo(300)
+            $0.height.equalTo(400)
             $0.width.equalToSuperview()
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview()
@@ -161,27 +161,79 @@ class ItemTappedViewController: BaseViewController {
         //pageControl
         pageControl.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.bottom.equalTo(imageScrollView.snp.bottom).inset(15)
+            $0.bottom.equalTo(imageScrollView.snp.bottom).inset(5)
             $0.height.equalTo(50)
             $0.width.equalTo(300)
+        }
+
+        // sellerInformaiton
+        sellerInformationCell.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(imageScrollView.snp.bottom).offset(5)
+            $0.width.equalToSuperview().inset(20)
+            $0.height.equalTo(70)
+        }
+
+        sellerInformationCell.addSubviews(sellerProfileImage, sellerNickName, sellerInformation, backButtonImage)
+
+        sellerProfileImage.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.centerY.equalToSuperview()
+            $0.width.equalTo(40)
+            $0.height.equalTo(40)
+        }
+
+        sellerNickName.snp.makeConstraints {
+            $0.leading.equalTo(sellerProfileImage.snp.trailing).offset(10)
+            $0.top.equalTo(sellerProfileImage)
+        }
+
+        sellerInformation.snp.makeConstraints {
+            $0.leading.equalTo(sellerNickName)
+            $0.top.equalTo(sellerNickName.snp.bottom).offset(5)
+        }
+
+//        backButtonImage.snp.makeConstraints {
+//            $0.trailing.equalToSuperview().inset(20)
+//            $0.centerY.equalToSuperview()
+//            $0.width.equalTo(20)
+//            $0.height.equalTo(20)
+//        }
+
+//        //bottomUI
+//        bottomUIView.snp.makeConstraints {
+//            $0.centerX.equalToSuperview()
+//            $0.top.equalTo(sellerInformationCell.snp.bottom).offset(10)
+//            $0.height.equalTo(116)
+//            $0.width.equalToSuperview()
+//        }
+//
+//        bottomUIView.addSubviews(buyButton)
+////        likeButton.snp.makeConstraints {
+////            $0.centerY.equalToSuperview()
+////            $0.leading.equalToSuperview().inset(30)
+////        }
+
+        // counselingButton
+        view.addSubview(counselingButton)
+
+        counselingButton.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(50)
+            $0.width.equalToSuperview().inset(20)
         }
 
         //titleTextView
         titleTextView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.width.equalToSuperview().inset(20)
-            $0.top.equalTo(imageScrollView.snp.bottom).offset(30)
-        }
-
-        //dayLabel
-        dayLabel.snp.makeConstraints {
-            $0.leading.equalTo(titleTextView).inset(5)
-            $0.top.equalTo(titleTextView.snp.bottom)
+            $0.top.equalTo(sellerInformation.snp.bottom).offset(15)
         }
 
         firstSeperator.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(dayLabel.snp.bottom).offset(10)
+            $0.top.equalTo(titleTextView.snp.bottom).offset(10)
             $0.width.equalToSuperview().inset(20)
             $0.height.equalTo(1)
         }
@@ -198,76 +250,22 @@ class ItemTappedViewController: BaseViewController {
             $0.width.equalToSuperview().inset(20)
             $0.height.equalTo(1)
         }
-
-        sellerInformationCell.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(secondSeperator).offset(5)
-            $0.width.equalToSuperview().inset(20)
-            $0.height.equalTo(70)
-        }
-
-        sellerInformationCell.addSubviews(sellerProfileImage, sellerNickName, sellerInformation, backButtonImage)
-
-        sellerProfileImage.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(20)
-            $0.centerY.equalToSuperview()
-            $0.width.equalTo(40)
-            $0.height.equalTo(40)
-        }
-
-        sellerNickName.snp.makeConstraints {
-            $0.leading.equalTo(sellerProfileImage.snp.trailing).offset(10)
-            $0.top.equalTo(sellerProfileImage)
-        }
-
-        sellerInformation.snp.makeConstraints {
-            $0.leading.equalTo(sellerNickName)
-            $0.top.equalTo(sellerNickName.snp.bottom).offset(5)
-        }
-
-        backButtonImage.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(20)
-            $0.centerY.equalToSuperview()
-            $0.width.equalTo(20)
-            $0.height.equalTo(20)
-        }
-
-        //bottomUI
-        bottomUIView.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalTo(view.snp.bottom)
-            $0.height.equalTo(116)
-            $0.width.equalToSuperview()
-        }
-
-        bottomUIView.addSubviews(buyButton, likeButton)
-        likeButton.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(30)
-        }
-
-        buyButton.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(30)
-            $0.height.equalTo(50)
-            $0.width.equalTo(200)
-        }
     }
     // configuration
     override func configUI() {
         configureScrollView()
     }
 
-    override func viewDidLayoutSubviews() {
-
-        baseScrollView.contentSize.height = imageScrollView.frame.height + titleTextView.frame.height + dayLabel.frame.height + descriptionTextView.frame.height + sellerInformationCell.frame.height + bottomUIView.frame.height * 1.5
-    }
+//    override func viewDidLayoutSubviews() {
+//
+//        baseScrollView.contentSize.height = imageScrollView.frame.height + titleTextView.frame.height + dayLabel.frame.height + descriptionTextView.frame.height + sellerInformationCell.frame.height + bottomUIView.frame.height * 1.5
+//    }
 
     private func setFunctionAndDelegate() {
 
         //addTarget
         likeButton.addTarget(self, action: #selector(didPressLikeButton(_:)), for: .touchUpInside)
-        buyButton.addTarget(self, action: #selector(didPressBuyButton(_:)), for: .touchUpInside)
+        counselingButton.addTarget(self, action: #selector(didPressBuyButton(_:)), for: .touchUpInside)
 
         reportButton.addTarget(self, action: #selector(didPressReportButton(_:)), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(didPressShareButton(_:)), for: .touchUpInside)
@@ -287,7 +285,7 @@ class ItemTappedViewController: BaseViewController {
         for pageIndex in 0..<images.count {
             let imageView = UIImageView()
             let xPositionOrigin = self.view.frame.width * CGFloat(pageIndex)
-            imageView.frame = CGRect(x: xPositionOrigin, y: 0, width: view.bounds.width, height: 300)
+            imageView.frame = CGRect(x: xPositionOrigin, y: 0, width: view.bounds.width, height: 400)
             imageView.backgroundColor = .orange
             imageView.image = images[pageIndex]
             imageScrollView.addSubview(imageView)

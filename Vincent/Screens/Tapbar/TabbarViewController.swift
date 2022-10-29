@@ -10,7 +10,7 @@ import UIKit
 class TabbarViewController: UITabBarController {
     
     private let mainViewController = UINavigationController(rootViewController: HomeViewController())
-    private let sellViewController = UINavigationController(rootViewController: SellViewController())
+    private let sellViewController = UINavigationController(rootViewController: ItemTappedViewController())
     private let messageViewController = UINavigationController(rootViewController: MessageViewController())
     
     override func viewDidLoad() {
